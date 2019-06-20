@@ -1,13 +1,16 @@
-import { ModuleWithProviders } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { ModuleWithProviders } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router";
 
-import { WeatherContainer } from './weather/weather.container';
+import { WeatherContainer } from "./weather/weather.container";
 
-const appRoutes: Routes = [
+const APP_ROUTES: Routes = [
   {
-    path: '',
-    pathMatch: 'full',
+    path: "",
+    pathMatch: "full",
     component: WeatherContainer
   }
 ];
-export const AppRoutingModule: ModuleWithProviders = RouterModule.forRoot(appRoutes);
+// nameOfConst: typeOfIt = libraryInside@angular/core.methodInsideRouterModule
+export const AppRoutingModule: ModuleWithProviders = RouterModule.forRoot(
+  APP_ROUTES
+);
