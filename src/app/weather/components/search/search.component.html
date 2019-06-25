@@ -2,14 +2,16 @@
   <div class="form-group col-8 pl-0">
     <input
       class="form-control mt-3 col"
+      ngModel
       id="city"
       name="city"
+      #searchForCity
       placeholder="City"
       type="text"
       required
     />
   </div>
-  <button class="searchButton" type="submit" (click)="search()">
+  <button class="searchButton" type="submit" (click)="search(searchForCity)">
     Search
   </button>
 </form>

@@ -2,28 +2,16 @@
   <thead class="thead">
     <tr>
       <th scope="col">City</th>
-      <th scope="col">Type of temperature</th>
-      <th scope="col">Min</th>
-      <th scope="col">Max</th>
-      <th scope="col">Icon</th>
+      <th scope="col">6AM</th>
+      <th scope="col">12PM</th>
+      <th scope="col">6PM</th>
+      <th scope="col">12AM</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td scope="row">{{ myWeather.cityName }}</td>
-      <td scope="row">{{ myWeather.tempType }}</td>
-      <td scope="row">{{ myWeather.minimum }}&deg;</td>
-      <td scope="row">{{ myWeather.maximum }}&deg;</td>
-      <td scope="row">
-        <img class="icon" src="{{ myWeather.icon }}" />
-      </td>
+    <tr *ngFor="let myWeather of cities">
+      <td scope="row">{{ myWeather.name }}</td>
+      <td scope="row" *ngFor="let t of myWeather.temperature">{{ t }}&deg;</td>
     </tr>
-    <!-- <tr>
-      <td scope="row">London</td>
-      <td scope="row">3 &deg;</td>
-      <td scope="row">12.5 &deg;</td>
-      <td scope="row">9 &deg;</td>
-      <td scope="row">2 &deg;</td>
-    </tr> -->
   </tbody>
 </table>
